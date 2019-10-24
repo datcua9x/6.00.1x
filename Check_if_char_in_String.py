@@ -8,11 +8,12 @@ def isIn(char, aStr):
     if aStr != '':
         if char == aStr[0]:
             return True
-        elif len(aStr) == 1:
+        elif len(aStr) == 1 or len(aStr) == 0:
             return False
         else:
             return isIn(char, aStr[1:])
     else:
         return False
 
-print(isIn('a', 'abcdefghik'))
+
+print(isIn('', ''))
