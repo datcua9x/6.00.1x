@@ -5,4 +5,4 @@ def gcdRecur(a, b):
         return gcdRecur(b, a % b)
 
 
-print(gcdRecur(160, 90))
+print(gcdRecur(130, 90))

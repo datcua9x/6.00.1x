@@ -7,4 +7,4 @@ def gcdIter(a, b):
     print(a)
 
 
-gcdIter(110, 115)
+gcdIter(187, 115)
