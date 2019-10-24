@@ -5,14 +5,15 @@ def isIn(char, aStr):
 
     returns: True if char is in aStr; False otherwise
     """
-    if aStr != '':
-        if char == aStr[0]:
-            return True
-        elif len(aStr) == 1:
-            return False
-        else:
-            return isIn(char, aStr[1:])
-    else:
+    if aStr == ' ':
         return False
+    if aStr <= 1:
+        return aStr == char
 
-print(isIn('a', 'abcdefghik'))
+    midchar = str[int(len(aStr)/2)]
+    midindex= len(aStr)//2
+
+
+
+
+
