@@ -1,4 +1,4 @@
-num = -19
+num = 11
 
 if num < 0:
     check = True
