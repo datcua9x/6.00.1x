@@ -11,4 +11,4 @@ def Calculate(balance, annual_Interest_Rate):
                 return i
 
 
-print("the minimum payment each month is ",Calculate(3329, 0.2))
+print("the minimum payment each month is ", Calculate(3329, 0.2))
