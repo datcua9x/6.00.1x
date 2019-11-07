@@ -20,3 +20,4 @@ def isIn(char, aStr):
 
 
 print(isIn('a ', ' '))
+isIn('b', 'helloworld')

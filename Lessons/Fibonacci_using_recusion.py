@@ -5,6 +5,6 @@ def Fibonacci(n):
         return Fibonacci(n - 1) + Fibonacci(n - 2)
 
 
-for n in range(20):
+for n in range(30):
     n += 1
     print(Fibonacci(n))
