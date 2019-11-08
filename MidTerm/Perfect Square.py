@@ -13,8 +13,8 @@ n = input("enter the number of perfect square you wanted = ")
 
 for i in range(int(n)):
     i += 1
-    ans = first_N(i)**2
-    print(ans)
+    answer = first_N(i)**2
+    print(answer)
 
 
 
