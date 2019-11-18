@@ -128,34 +128,34 @@ def playGame(wordList):
     newhand = {}
     while True:
         choice = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
-        if choice == 'n' or choice == 'r':
+        if choice == 'n':
             while True:
                 mode = input("Enter u to have yourself play, c to have the computer play: ")
-                if mode == 'u' and choice == 'n':
+                if mode == 'u':
                     hand = dealHand(HAND_SIZE)
                     playHand(hand, wordList, HAND_SIZE)
-                    newhand = hand.copy()
                     break
-                elif mode == 'u' and choice == 'r':
-                    if newhand == {}:
-                        print("You have not played a hand yet. Please play a new hand first!")
-                    else:
-                        playHand(newhand, wordList, HAND_SIZE)
-                        break
-                elif mode == 'c' and choice == 'n':
+                elif mode == 'c':
                     hand = dealHand(HAND_SIZE)
-                    newhand = hand.copy()
                     compPlayHand(hand, wordList, HAND_SIZE)
-                elif mode == 'c' and choice == 'r':
-                    if newhand == {}:
-                        print("You have not played a hand yet. Please play a new hand first!")
-                    else:
-                        compPlayHand(newhand, wordList, HAND_SIZE)
-                        break
                 else:
                     print("Invalid Command")
+            newhand = hand.copy()
+        elif choice == 'r':
+            if newhand == {}:
+                print("You have not played a hand yet. Please play a new hand first!")
+            else:
+                while True:
+                    mode = input("Enter u to have yourself play, c to have the computer play: ")
+                    if mode == 'u':
+                        playHand(newhand, wordList, HAND_SIZE)
+                        break
+                    elif mode == 'c':
+                        compPlayHand(newhand, wordList, HAND_SIZE)
+                        break
+                    else:
+                        print("Invalid Command")
         elif choice == 'e':
-            print("Thanks for playing")
             break
         else:
             print("Invalid Command")
