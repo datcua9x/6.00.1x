@@ -9,7 +9,7 @@ into [1,'a','cat',2,3,'dog',4,5] (order matters).
 def flatten(aList):
     """
     aList: The list contains other lists, strings,or ints
-    returns: flattened list(order matters)
+    returns: flattened list(eliminate the redundancy element)
     """
     if not aList:
         return []
